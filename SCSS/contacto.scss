@@ -1,0 +1,135 @@
+/*=================CONTACTO=================*/
+
+.contacto {
+  @include flex;
+  justify-content: center;
+}
+
+.contacto__article--form {
+  width: 85%;
+  justify-self: center;
+}
+
+.divEscribinos {
+  background-color: #ecf0fc;
+  margin-top: 5%;
+  padding: 8%;
+  min-width: max-content;
+  .h2Escribinos {
+    color: $color_titulo;
+    font-size: 2rem;
+  }
+}
+
+form {
+  font-size: 1.6rem;
+  margin-top: 2%;
+  min-width: max-content;
+  .textArea,
+  input {
+    width: 100%;
+  }
+  .boton {
+    width: 20%;
+    margin-left: 75%;
+  }
+}
+
+.contacto__article--redes {
+  text-align: center;
+  padding-top: 8%;
+  h2 {
+    color: $color_titulo;
+    font-size: 2rem;
+  }
+}
+
+.redesContacto {
+  text-align: center;
+  text-decoration: none;
+  color: #7989b8;
+  font-size: 4rem;
+  a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    i {
+      font-size: 8rem;
+    }
+  }
+}
+
+.contacto__article--mapa {
+  justify-self: stretch;
+  align-self: stretch;
+  padding: 5%;
+}
+
+.contacto__article--domicilio {
+  justify-self: stretch;
+  align-self: stretch;
+  h2 {
+    color: $color_titulo;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 2%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .contacto {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    min-height: 100vh;
+    grid-template-columns: 3.5fr 2fr;
+    grid-template-areas: "article_form article_redes" "article_map article_dom";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .contacto__article--form {
+    grid-area: article_form;
+    width: 80%;
+    align-self: stretch;
+    justify-self: center;
+  }
+
+  form {
+    margin-left: 4%;
+  }
+
+  .contacto__article--redes {
+    grid-area: article_redes;
+    text-align: center;
+    padding-top: 20%;
+  }
+
+  .contacto__article--mapa {
+    grid-area: article_map;
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 10%;
+  }
+
+  .contacto__article--domicilio {
+    grid-area: article_dom;
+    justify-self: stretch;
+    align-self: stretch;
+  }
+
+  .contacto__article--domicilio h2 {
+    margin-top: 20%;
+    margin-left: 20%;
+  }
+
+  .contacto__article--domicilio p {
+    text-align: start;
+    padding-left: 25%;
+    margin-top: 4%;
+  }
+}

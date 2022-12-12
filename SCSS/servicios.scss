@@ -1,0 +1,26 @@
+/*=================SERVICIOS=================*/
+
+.servicios {
+  justify-content: space-around;
+}
+
+.servicios {
+  @include flex;
+  padding: 2%;
+  justify-content: space-around;
+}
+
+.servicios__imagen--tamaño {
+  width: 475px;
+  height: 420px;
+}
+
+.section__ul--texto {
+  padding-left: 3%;
+  font-size: 1.8rem;
+  text-decoration: none;
+  list-style-position: inside;
+  list-style-type: circle;
+  text-align: justify;
+  font-family: Source Serif;
+}

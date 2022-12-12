@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+$fuente_1: "Montserrat", sans-serif;
+$fuente_2: "Source Serif Pro", sans-serif;
+$fuente_3: "Source Serif", sans-serif;
+$screen_minima: 470px;
+$color_titulo: rgba(61, 6, 119, 0.766);
+
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*====================================================================ESTILOS DEL MAIN====================================================================*/
+
+@import "index";
+@import "quienes_somos";
+@import "servicios";
+@import "contacto";
+@import "partners";
+
+/*====================================================================ESTILOS DEL HEADER====================================================================*/
+
+.logo {
+  height: 8rem;
+  vertical-align: top;
+}
+
+body {
+  font-family: $fuente_1;
+  /*height: 100vh; Solo para poder ver el position sticky */
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  background-color: #242b44f8;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+nav {
+  background-color: #c7d2f5;
+  text-align: right;
+}
+
+.menu {
+  width: 100%;
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  right: 2%;
+  margin: 0;
+  .menu__items--i {
+    display: inline-block;
+    margin-right: 2%;
+    .menu__items--texto {
+      color: rgba(64, 8, 85, 0.881);
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen_minima) {
+  .menu__items--texto {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 300%;
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
+}
+
+/*====================================================================ESTILOS DEL FOOTER====================================================================*/
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.tituloContactos {
+  font-size: 1rem;
+}
+
+.redes {
+  a {
+    i {
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+      padding-inline: 0.5%;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.copyright {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.4rem;
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (min-width: $screen_minima) {
+  .copyright {
+    font-size: 0.9rem;
+  }
+}
