@@ -11,8 +11,6 @@
 
 .quienesSomos__article--fotos {
   background-color: #ecf0fc;
-  /*   width: 100%;
-  height: 15%; */
 }
 
 .quienesSomos__img--foto {
@@ -41,29 +39,5 @@
     text-align: justify;
     font-size: 1.8rem;
     text-decoration: none;
-  }
-}
-
-@media screen and (min-width: $screen_minima) {
-  .quienesSomos {
-    text-align: left;
-    padding: 2%;
-  }
-
-  .quienesSomos__article--fotos {
-    background-color: #ecf0fc;
-    height: auto;
-    width: auto;
-  }
-
-  .quienesSomos__img--foto {
-    width: 285px;
-    height: 300px;
-    padding: 3%;
-  }
-
-  .quienesSomos__article--perfil {
-    margin-left: 2%;
-    width: 76%;
   }
 }

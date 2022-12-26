@@ -37,7 +37,6 @@ $color_titulo: rgba(61, 6, 119, 0.766);
 
 body {
   font-family: $fuente_1;
-  /*height: 100vh; Solo para poder ver el position sticky */
   height: 100%;
 }
 
@@ -74,18 +73,6 @@ nav {
         opacity: 0.65;
       }
     }
-  }
-}
-
-@media screen and (min-width: $screen_minima) {
-  .menu__items--texto {
-    font-size: 1.4rem;
-  }
-  h1 {
-    font-size: 300%;
-  }
-  .slogan {
-    font-size: 1.5rem;
   }
 }
 
@@ -132,8 +119,120 @@ footer {
   }
 }
 
+/*====================================================================MEDIA QUERIES====================================================================*/
+
+/* ----HEADER & SLOGAN---- */
 @media screen and (min-width: $screen_minima) {
+  .menu__items--texto {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 300%;
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
+
+  /* ----FOOTER---- */
   .copyright {
     font-size: 0.9rem;
+  }
+
+  /* ----INDEX---- */
+  h1 {
+    font-size: 300%;
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
+  .sectionHome__article--formato {
+    display: inline-block;
+    width: 30%;
+    margin-inline: 9%;
+  }
+
+  /* ----QUIENES SOMOS---- */
+  .quienesSomos {
+    text-align: left;
+    padding: 2%;
+  }
+
+  .quienesSomos__article--fotos {
+    background-color: #ecf0fc;
+    height: auto;
+    width: auto;
+  }
+
+  .quienesSomos__img--foto {
+    width: 285px;
+    height: 300px;
+    padding: 3%;
+  }
+
+  .quienesSomos__article--perfil {
+    margin-left: 2%;
+    width: 76%;
+  }
+
+  /* ----SERVICIOS---- */
+  .servicios__imagen--tamaño {
+    width: 475px;
+    height: 420px;
+  }
+}
+
+/* ----CONTACTO---- */
+@media screen and (min-width: 700px) {
+  .contacto {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    min-height: 100vh;
+    grid-template-columns: 3.5fr 2fr;
+    grid-template-areas: "article_form article_redes" "article_map article_dom";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .contacto__article--form {
+    grid-area: article_form;
+    width: 80%;
+    align-self: stretch;
+    justify-self: center;
+  }
+
+  form {
+    margin-left: 4%;
+  }
+
+  .contacto__article--redes {
+    grid-area: article_redes;
+    text-align: center;
+    padding-top: 20%;
+  }
+
+  .contacto__article--mapa {
+    grid-area: article_map;
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 10%;
+  }
+
+  .contacto__article--domicilio {
+    grid-area: article_dom;
+    justify-self: stretch;
+    align-self: stretch;
+  }
+
+  .contacto__article--domicilio h2 {
+    margin-top: 20%;
+    margin-left: 20%;
+  }
+
+  .contacto__article--domicilio p {
+    text-align: start;
+    padding-left: 25%;
+    margin-top: 4%;
   }
 }

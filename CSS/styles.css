@@ -43,8 +43,7 @@ h1 {
 
 .slogan {
   font-family: "Source Serif Pro", sans-serif;
-  color: red;
-  /* color: rgb(51, 12, 65); */
+  color: rgb(51, 12, 65);
   font-size: 1rem;
   font-style: italic;
   text-align: center;
@@ -52,19 +51,6 @@ h1 {
   padding-bottom: 4%;
 }
 
-@media screen and (min-width: 470px) {
-  h1 {
-    font-size: 300%;
-  }
-  .slogan {
-    font-size: 1.5rem;
-  }
-  .sectionHome__article--formato {
-    display: inline-block;
-    width: 30%;
-    margin-inline: 9%;
-  }
-}
 /*=================QUIENES SOMOS=================*/
 .quienesSomos {
   display: flex;
@@ -79,8 +65,6 @@ h1 {
 
 .quienesSomos__article--fotos {
   background-color: #ecf0fc;
-  /*   width: 100%;
-  height: 15%; */
 }
 
 .quienesSomos__img--foto {
@@ -110,42 +94,19 @@ h1 {
   text-decoration: none;
 }
 
-@media screen and (min-width: 470px) {
-  .quienesSomos {
-    text-align: left;
-    padding: 2%;
-  }
-  .quienesSomos__article--fotos {
-    background-color: #ecf0fc;
-    height: auto;
-    width: auto;
-  }
-  .quienesSomos__img--foto {
-    width: 285px;
-    height: 300px;
-    padding: 3%;
-  }
-  .quienesSomos__article--perfil {
-    margin-left: 2%;
-    width: 76%;
-  }
-}
 /*=================SERVICIOS=================*/
 .servicios {
   justify-content: space-around;
-}
-
-.servicios {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 2%;
-  justify-content: space-around;
 }
 
 .servicios__imagen--tamaño {
-  width: 475px;
-  height: 420px;
+  width: 300px;
+  height: 280px;
+  padding: 2%;
 }
 
 .section__ul--texto {
@@ -240,6 +201,158 @@ form .boton {
   margin-top: 2%;
 }
 
+/*=================PARTNERS=================*/
+.divPartner {
+  justify-self: center;
+  align-self: center;
+}
+
+.imgPartner {
+  margin: 0%;
+  padding: 1%;
+  width: 80%;
+  height: 50%;
+}
+
+/*====================================================================ESTILOS DEL HEADER====================================================================*/
+.logo {
+  height: 8rem;
+  vertical-align: top;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  background-color: rgba(36, 43, 68, 0.9725490196);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+nav {
+  background-color: #c7d2f5;
+  text-align: right;
+}
+
+.menu {
+  width: 100%;
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  right: 2%;
+  margin: 0;
+}
+.menu .menu__items--i {
+  display: inline-block;
+  margin-right: 2%;
+}
+.menu .menu__items--i .menu__items--texto {
+  color: rgba(64, 8, 85, 0.881);
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu .menu__items--i .menu__items--texto:hover {
+  opacity: 0.65;
+}
+
+/*====================================================================ESTILOS DEL FOOTER====================================================================*/
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.tituloContactos {
+  font-size: 1rem;
+}
+
+.redes a i {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  padding-inline: 0.5%;
+}
+.redes a i:hover {
+  opacity: 0.7;
+}
+
+.copyright {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.4rem;
+}
+.copyright a {
+  color: black;
+  text-decoration: none;
+}
+.copyright a:hover {
+  opacity: 0.7;
+}
+
+/*====================================================================MEDIA QUERIES====================================================================*/
+/* ----HEADER & SLOGAN---- */
+@media screen and (min-width: 470px) {
+  .menu__items--texto {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 300%;
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
+  /* ----FOOTER---- */
+  .copyright {
+    font-size: 0.9rem;
+  }
+  /* ----INDEX---- */
+  h1 {
+    font-size: 300%;
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
+  .sectionHome__article--formato {
+    display: inline-block;
+    width: 30%;
+    margin-inline: 9%;
+  }
+  /* ----QUIENES SOMOS---- */
+  .quienesSomos {
+    text-align: left;
+    padding: 2%;
+  }
+  .quienesSomos__article--fotos {
+    background-color: #ecf0fc;
+    height: auto;
+    width: auto;
+  }
+  .quienesSomos__img--foto {
+    width: 285px;
+    height: 300px;
+    padding: 3%;
+  }
+  .quienesSomos__article--perfil {
+    margin-left: 2%;
+    width: 76%;
+  }
+  /* ----SERVICIOS---- */
+  .servicios__imagen--tamaño {
+    width: 475px;
+    height: 420px;
+  }
+}
+/* ----CONTACTO---- */
 @media screen and (min-width: 700px) {
   .contacto {
     display: grid;
@@ -285,123 +398,6 @@ form .boton {
     text-align: start;
     padding-left: 25%;
     margin-top: 4%;
-  }
-}
-/*=================PARTNERS=================*/
-.divPartner {
-  justify-self: center;
-  align-self: center;
-}
-
-.imgPartner {
-  /* 
-    background-color: red; */
-  margin: 0%;
-  padding: 1%;
-  width: 80%;
-  height: 50%;
-}
-
-/*====================================================================ESTILOS DEL HEADER====================================================================*/
-.logo {
-  height: 8rem;
-  vertical-align: top;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  /*height: 100vh; Solo para poder ver el position sticky */
-  height: 100%;
-}
-
-header {
-  width: 100%;
-  background-color: rgba(36, 43, 68, 0.9725490196);
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  opacity: 0.9;
-}
-
-nav {
-  background-color: #c7d2f5;
-  text-align: right;
-}
-
-.menu {
-  width: 100%;
-  list-style: none;
-  display: inline-block;
-  position: relative;
-  right: 2%;
-  margin: 0;
-}
-.menu .menu__items--i {
-  display: inline-block;
-  margin-right: 2%;
-}
-.menu .menu__items--i .menu__items--texto {
-  color: rgba(64, 8, 85, 0.881);
-  font-size: 1.1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-.menu .menu__items--i .menu__items--texto:hover {
-  opacity: 0.65;
-}
-
-@media screen and (min-width: 470px) {
-  .menu__items--texto {
-    font-size: 1.4rem;
-  }
-  h1 {
-    font-size: 300%;
-  }
-  .slogan {
-    font-size: 1.5rem;
-  }
-}
-/*====================================================================ESTILOS DEL FOOTER====================================================================*/
-footer {
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
-
-.tituloContactos {
-  font-size: 1rem;
-}
-
-.redes a i {
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
-  padding-inline: 0.5%;
-}
-.redes a i:hover {
-  opacity: 0.7;
-}
-
-.copyright {
-  background-color: white;
-  color: black;
-  text-decoration: none;
-  text-align: center;
-  font-size: 0.4rem;
-}
-.copyright a {
-  color: black;
-  text-decoration: none;
-}
-.copyright a:hover {
-  opacity: 0.7;
-}
-
-@media screen and (min-width: 470px) {
-  .copyright {
-    font-size: 0.9rem;
   }
 }
 

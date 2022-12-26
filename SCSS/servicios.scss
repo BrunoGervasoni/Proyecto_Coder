@@ -2,17 +2,14 @@
 
 .servicios {
   justify-content: space-around;
-}
-
-.servicios {
   @include flex;
   padding: 2%;
-  justify-content: space-around;
 }
 
 .servicios__imagen--tamaño {
-  width: 475px;
-  height: 420px;
+  width: 300px;
+  height: 280px;
+  padding: 2%;
 }
 
 .section__ul--texto {
