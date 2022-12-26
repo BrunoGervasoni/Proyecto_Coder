@@ -43,7 +43,8 @@ h1 {
 
 .slogan {
   font-family: "Source Serif Pro", sans-serif;
-  color: rgb(51, 12, 65);
+  color: red;
+  /* color: rgb(51, 12, 65); */
   font-size: 1rem;
   font-style: italic;
   text-align: center;
